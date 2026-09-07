@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Tale of Two Eagles Championships</title>
+
+    <meta
+      name="description"
+      content="A data story comparing the 2017 and 2024 Philadelphia Eagles Super Bowl championship teams."
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="#top">A Tale Of Two Eagles Championships</a>
+
+        <nav aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="#story">Story</a>
+            </li>
+
+            <li>
+              <a href="#championships">Quarterbacks</a>
+            </li>
+
+            <li>
+              <a href="#data">Data</a>
+            </li>
+
+            <li>
+              <a href="#visualization">Visualization</a>
+            </li>
+
+            <li>
+              <a href="#sources">Sources</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- =========================================================
+           D1: STORY FRAME
+           ========================================================= -->
+
+      <section class="story-hero" id="story">
+        <div class="story-container">
+          <p class="eyebrow">Philadelphia Eagles Championship Data Story</p>
+
+          <h1>A Tale of Two Eagles Championships</h1>
+
+          <p class="subtitle">
+            Two Championships, Seven Years Apart, Two Different Eagles Teams
+          </p>
+
+          <p class="lede">
+            The Philadelphia Eagles reached the top of the NFL twice within
+            seven seasons, winning Super Bowl LII after the 2017 season and
+            Super Bowl LIX after the 2024 season. Although both championship
+            teams finished with nearly identical regular-season point
+            differentials, the numbers reveal two different offensive
+            identities. The 2017 Eagles produced more passing yards and passing
+            touchdowns, while the 2024 Eagles generated a much stronger rushing
+            attack. Comparing scoring, passing, and rushing statistics from both
+            seasons shows how Philadelphia reached a similar championship result
+            with a different balance on offense.
+          </p>
+
+          <div class="story-question">
+            <h2>Central Question</h2>
+
+            <p>
+              Did the Philadelphia Eagles' 2017 and 2024 Super Bowl
+              championship teams win in the same way?
+            </p>
+          </div>
+
+          <div class="story-claim">
+            <h2>Claim</h2>
+
+            <p>
+              The Eagles' two Super Bowl championship teams produced nearly
+              identical regular-season point differentials, but their offensive
+              profiles differed significantly: the 2017 team relied more
+              heavily on passing production, while the 2024 team generated
+              substantially more production through its rushing attack.
+            </p>
+          </div>
+
+          <aside class="data-note">
+            <h2>Methods and Source Note</h2>
+
+            <p>
+              Regular-season team statistics for the 2017 and 2024 Philadelphia
+              Eagles were collected from Pro Football Reference. The comparison
+              uses wins, scoring, total offense, passing, and rushing
+              statistics. Difference values were calculated by subtracting each
+              2017 value from the corresponding 2024 value. The 2017 season
+              consisted of 16 regular-season games, while the 2024 season
+              consisted of 17, so raw season totals should be interpreted with
+              that schedule difference in mind.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           D2: EDITORIAL FIGURES
+           ========================================================= -->
+
+      <section class="content-section" id="championships">
+        <div class="story-container">
+          <header class="section-heading">
+            <p class="eyebrow">Two Championship Quarterbacks</p>
+
+            <h2>Different Leaders, Same Destination</h2>
+
+            <p>
+              Nick Foles became the face of Philadelphia's 2017 championship
+              run, while Jalen Hurts led the Eagles offense during the team's
+              return to the top after the 2024 season.
+            </p>
+          </header>
+
+          <div class="figure-grid">
+            <!-- Nick Foles Figure -->
+
+            <figure class="editorial-figure">
+                <img
+                    src="images/nick-foles-2017.jpg"
+                    width="852"
+                    height="923"
+                    alt="Nick Foles stands during the Philadelphia Eagles Super Bowl LII victory parade."
+                >
+
+                <figcaption>
+                    <p class="figure-title">
+                    Nick Foles and the 2017 Eagles
+                    </p>
+
+                    <p>
+                    Nick Foles appears during the Philadelphia Eagles' Super Bowl LII
+                    victory parade after the team defeated the New England Patriots 41–33.
+                    </p>
+
+                    <p class="figure-credit">
+                    Photo by Governor Tom Wolf, licensed under CC BY 2.0,
+                    via Wikimedia Commons.
+                    </p>
+                </figcaption>
+            </figure>
+
+            <!-- Jalen Hurts Figure -->
+
+            <figure class="editorial-figure">
+                <img
+                    src="images/jalen-hurts-eagles.jpg"
+                    width="1576"
+                    height="1741"
+                    alt="Jalen Hurts carries the football while playing quarterback for the Philadelphia Eagles."
+                >
+
+                <figcaption>
+                    <p class="figure-title">
+                    Jalen Hurts and the 2024 Eagles
+                    </p>
+
+                    <p>
+                    Jalen Hurts represents the quarterback leadership of the Eagles team
+                    that completed the 2024 season by defeating the Kansas City Chiefs
+                    40–22 in Super Bowl LIX.
+                    </p>
+
+                    <p class="figure-credit">
+                    Photo by All-Pro Reels, licensed under CC BY-SA 2.0,
+                    via Wikimedia Commons.
+                    </p>
+                </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           D3: ACCESSIBLE DATA TABLE
+           ========================================================= -->
+
+      <section class="content-section" id="data">
+        <div class="story-container">
+          <header class="section-heading">
+            <p class="eyebrow">Regular-Season Comparison</p>
+
+            <h2>What Changed Between the Two Championship Teams?</h2>
+
+            <p>
+              Philadelphia's overall scoring margin barely changed between the
+              two championship seasons. The way the Eagles generated offensive
+              production, however, changed considerably.
+            </p>
+          </header>
+
+          <div
+            class="table-wrapper"
+            role="region"
+            aria-labelledby="comparison-caption"
+            tabindex="0"
+          >
+            <table>
+              <caption id="comparison-caption">
+                Regular-Season Comparison of the 2017 and 2024 Philadelphia
+                Eagles
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Statistic</th>
+                  <th scope="col">2017 Eagles</th>
+                  <th scope="col">2024 Eagles</th>
+                  <th scope="col">Difference</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row">Wins</th>
+                  <td class="numeric">13</td>
+                  <td class="numeric">14</td>
+                  <td class="numeric">+1</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Points scored</th>
+                  <td class="numeric">457</td>
+                  <td class="numeric">463</td>
+                  <td class="numeric">+6</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Points allowed</th>
+                  <td class="numeric">295</td>
+                  <td class="numeric">303</td>
+                  <td class="numeric">+8</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Point differential</th>
+                  <td class="numeric">+162</td>
+                  <td class="numeric">+160</td>
+                  <td class="numeric">−2</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Total offensive yards</th>
+                  <td class="numeric">5,852</td>
+                  <td class="numeric">6,242</td>
+                  <td class="numeric">+390</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Passing yards</th>
+                  <td class="numeric">3,737</td>
+                  <td class="numeric">3,194</td>
+                  <td class="numeric">−543</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Passing touchdowns</th>
+                  <td class="numeric">38</td>
+                  <td class="numeric">24</td>
+                  <td class="numeric">−14</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Rushing yards</th>
+                  <td class="numeric">2,115</td>
+                  <td class="numeric">3,048</td>
+                  <td class="numeric">+933</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Rushing touchdowns</th>
+                  <td class="numeric">9</td>
+                  <td class="numeric">29</td>
+                  <td class="numeric">+20</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Yards per rushing attempt</th>
+                  <td class="numeric">4.5</td>
+                  <td class="numeric">4.9</td>
+                  <td class="numeric">+0.4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="source-note">
+            <strong>Sources:</strong>
+            <a
+              href="https://www.pro-football-reference.com/teams/phi/2017.htm"
+            >
+              Pro Football Reference: 2017 Philadelphia Eagles
+            </a>
+            and
+            <a
+              href="https://www.pro-football-reference.com/teams/phi/2024.htm"
+            >
+              Pro Football Reference: 2024 Philadelphia Eagles
+            </a>.
+            Difference values were calculated as 2024 minus 2017.
+          </p>
+
+          <aside class="data-note">
+            <h3>Schedule-Length Limitation</h3>
+
+            <p>
+              The NFL regular season expanded between these championship
+              seasons. Philadelphia played 16 regular-season games in 2017 and
+              17 regular-season games in 2024. The table reports published
+              season totals rather than attempting to adjust the original
+              values.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           D4: RESPONSIVE SVG
+           ========================================================= -->
+
+      <section class="content-section" id="visualization">
+        <div class="story-container">
+          <header class="section-heading">
+            <p class="eyebrow">Offensive Identity</p>
+
+            <h2>From Passing Strength to Rushing Power</h2>
+
+            <p>
+              The championship teams reached similar overall results while
+              producing offense in noticeably different ways.
+            </p>
+          </header>
+
+          <figure class="chart-figure">
+            <svg
+              class="comparison-chart"
+              viewBox="0 0 1000 820"
+              role="img"
+              aria-labelledby="chart-title chart-desc"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title id="chart-title">
+                2017 and 2024 Philadelphia Eagles offensive comparison
+              </title>
+
+              <desc id="chart-desc">
+                The 2017 Eagles produced more passing yards and passing
+                touchdowns, while the 2024 Eagles produced substantially more
+                rushing yards and rushing touchdowns.
+              </desc>
+
+              <!-- Football-field background -->
+              <rect
+                class="chart-field"
+                x="0"
+                y="0"
+                width="1000"
+                height="820"
+                rx="24"
+              />
+
+              <!-- Yard lines -->
+              <g class="yard-lines" aria-hidden="true">
+                <line x1="100" y1="0" x2="100" y2="820" />
+                <line x1="200" y1="0" x2="200" y2="820" />
+                <line x1="300" y1="0" x2="300" y2="820" />
+                <line x1="400" y1="0" x2="400" y2="820" />
+                <line x1="500" y1="0" x2="500" y2="820" />
+                <line x1="600" y1="0" x2="600" y2="820" />
+                <line x1="700" y1="0" x2="700" y2="820" />
+                <line x1="800" y1="0" x2="800" y2="820" />
+                <line x1="900" y1="0" x2="900" y2="820" />
+              </g>
+
+              <!-- Chart heading -->
+              <text
+                class="chart-heading"
+                x="500"
+                y="70"
+                text-anchor="middle"
+              >
+                Two Championship Offenses
+              </text>
+
+              <text
+                class="chart-subheading"
+                x="500"
+                y="108"
+                text-anchor="middle"
+              >
+                2017 vs. 2024 Philadelphia Eagles
+              </text>
+
+              <!-- Legend -->
+              <g class="chart-legend" aria-hidden="true">
+                <rect
+                  class="bar-2017"
+                  x="325"
+                  y="135"
+                  width="24"
+                  height="24"
+                  rx="3"
+                />
+
+                <text x="360" y="154">
+                  2017
+                </text>
+
+                <rect
+                  class="bar-2024"
+                  x="535"
+                  y="135"
+                  width="24"
+                  height="24"
+                  rx="3"
+                />
+
+                <text x="570" y="154">
+                  2024
+                </text>
+              </g>
+
+              <!-- YARDS -->
+              <text
+                class="chart-section-title"
+                x="80"
+                y="225"
+              >
+                YARDS
+              </text>
+
+              <!-- Passing yards -->
+              <text
+                class="chart-label"
+                x="80"
+                y="285"
+              >
+                Passing
+              </text>
+
+              <rect
+                class="bar-2017"
+                x="270"
+                y="250"
+                width="560"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="845"
+                y="276"
+              >
+                3,737
+              </text>
+
+              <rect
+                class="bar-2024"
+                x="270"
+                y="300"
+                width="479"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="764"
+                y="326"
+              >
+                3,194
+              </text>
+
+              <!-- Rushing yards -->
+              <text
+                class="chart-label"
+                x="80"
+                y="405"
+              >
+                Rushing
+              </text>
+
+              <rect
+                class="bar-2017"
+                x="270"
+                y="370"
+                width="317"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="602"
+                y="396"
+              >
+                2,115
+              </text>
+
+              <rect
+                class="bar-2024"
+                x="270"
+                y="420"
+                width="457"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="742"
+                y="446"
+              >
+                3,048
+              </text>
+
+              <!-- TOUCHDOWNS -->
+              <text
+                class="chart-section-title"
+                x="80"
+                y="545"
+              >
+                TOUCHDOWNS
+              </text>
+
+              <!-- Passing TD -->
+              <text
+                class="chart-label"
+                x="80"
+                y="605"
+              >
+                Passing
+              </text>
+
+              <rect
+                class="bar-2017"
+                x="270"
+                y="570"
+                width="475"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="760"
+                y="596"
+              >
+                38
+              </text>
+
+              <rect
+                class="bar-2024"
+                x="270"
+                y="620"
+                width="300"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="585"
+                y="646"
+              >
+                24
+              </text>
+
+              <!-- Rushing TD -->
+              <text
+                class="chart-label"
+                x="80"
+                y="725"
+              >
+                Rushing
+              </text>
+
+              <rect
+                class="bar-2017"
+                x="270"
+                y="690"
+                width="113"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="398"
+                y="716"
+              >
+                9
+              </text>
+
+              <rect
+                class="bar-2024"
+                x="270"
+                y="740"
+                width="363"
+                height="35"
+                rx="5"
+              />
+
+              <text
+                class="chart-value"
+                x="648"
+                y="766"
+              >
+                29
+              </text>
+            </svg>
+
+            <figcaption>
+              The 2017 Eagles produced more passing yards and passing
+              touchdowns, while the 2024 Eagles produced considerably more
+              rushing yards and rushing touchdowns. Yardage and touchdown
+              sections use separate visual scales because they represent
+              different units.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           D6: SOURCES AND DOCUMENTATION
+           ========================================================= -->
+
+      <section class="content-section" id="sources">
+        <div class="story-container">
+          <header class="section-heading">
+            <p class="eyebrow">Documentation</p>
+
+            <h2>Sources, Credits, and Data Notes</h2>
+          </header>
+
+          <section class="documentation-block">
+            <h3>Statistical Sources</h3>
+
+            <ul>
+              <li>
+                <a
+                  href="https://www.pro-football-reference.com/teams/phi/2017.htm"
+                >
+                  Pro Football Reference — 2017 Philadelphia Eagles
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.pro-football-reference.com/teams/phi/2024.htm"
+                >
+                  Pro Football Reference — 2024 Philadelphia Eagles
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="documentation-block">
+             <h3>Asset Credits</h3>
+
+                    <ul>
+                        <li>
+                        <strong>Nick Foles image:</strong>
+                        Photo by Governor Tom Wolf during the Philadelphia Eagles
+                        Super Bowl LII Victory Parade, February 8, 2018.
+                        Licensed under
+                        <a href="https://creativecommons.org/licenses/by/2.0/">
+                            CC BY 2.0
+                        </a>.
+                        Source:
+                        <a
+                            href="https://commons.wikimedia.org/wiki/File:Nick_Foles_Philadelphia_Eagles_Super_Bowl_LII_Victory_Parade_(40140602902).jpg"
+                        >
+                            Wikimedia Commons
+                        </a>.
+                        </li>
+
+                        <li>
+                        <strong>Jalen Hurts image:</strong>
+                        Photo by All-Pro Reels of Jalen Hurts playing for the
+                        Philadelphia Eagles. Licensed under
+                        <a href="https://creativecommons.org/licenses/by-sa/2.0/">
+                            CC BY-SA 2.0
+                        </a>.
+                        Source:
+                        <a
+                            href="https://commons.wikimedia.org/wiki/File:Jalen_Hurts_2022_Eagles_(cropped).jpg"
+                        >
+                            Wikimedia Commons
+                        </a>.
+                        </li>
+                    </ul>
+            </section>
+
+          <section class="documentation-block">
+            <h3>Data Transformation Note</h3>
+
+            <p>
+              Statistical values for the 2017 and 2024 seasons were transcribed
+              from the cited team-statistics sources. Values in the Difference
+              column were calculated by subtracting each 2017 value from the
+              corresponding 2024 value. No source values were otherwise altered.
+              Because the NFL regular season expanded from 16 games in 2017 to
+              17 games in 2024, raw season totals are presented with that
+              limitation disclosed.
+            </p>
+          </section>
+
+          <section class="documentation-block">
+            <h3>Testing Record</h3>
+
+            <ul>
+              <li>
+                HTML validation: to be completed.
+              </li>
+
+              <li>
+                CSS validation: to be completed.
+              </li>
+
+              <li>
+                320-pixel viewport test: to be completed.
+              </li>
+
+              <li>
+                768-pixel viewport test: to be completed.
+              </li>
+
+              <li>
+                1280-pixel viewport test: to be completed.
+              </li>
+
+              <li>
+                200% zoom and reflow test: to be completed.
+              </li>
+
+              <li>
+                Keyboard-access test: to be completed.
+              </li>
+
+              <li>
+                Accessibility-tree review of figures, table, and SVG:
+                to be completed.
+              </li>
+
+              <li>
+                Image-disabled review: to be completed.
+              </li>
+
+              <li>
+                Source-to-page spot-check of at least three statistical values:
+                to be completed.
+              </li>
+            </ul>
+          </section>
+
+          <section class="documentation-block">
+            <h3>AI Disclosure</h3>
+
+            <p>
+              AI assistance was used to help organize research, compare possible
+              story directions, suggest accessibility patterns, and review HTML
+              and data-presentation choices. I selected the story topic,
+              reviewed and verified the source data, made the final design
+              decisions, tested the finished page, and am responsible for
+              understanding and explaining all submitted code.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="story-container">
+        <p>
+          Data Story created for GIT 337: Intermediate Web Coding.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
